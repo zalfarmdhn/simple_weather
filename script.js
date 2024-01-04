@@ -36,7 +36,6 @@ async function getWeatherData(city) {
 }
 
 function displayWeatherInfo(data) {
-    console.log(data);
     const {
         location: {
             name: city,
@@ -82,11 +81,11 @@ function displayWeatherInfo(data) {
     card.appendChild(WeatherDesc);
     WeatherDesc.appendChild(cityInfo);
     cityInfo.appendChild(cityDisplay);
-    cityInfo.appendChild(time);
     cityInfo.appendChild(tempDisplay);
     cityInfo.appendChild(weatherEmoji);
-    cityInfo.appendChild(humidityDisplay);
     cityInfo.appendChild(descDisplay);
+    cityInfo.appendChild(humidityDisplay);
+    cityInfo.appendChild(time);
 
     weatherEmoji.setAttribute('src', `https://${condition.icon}`);
 };
